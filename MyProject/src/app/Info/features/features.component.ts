@@ -4,13 +4,16 @@ import { Component } from '@angular/core';
   selector: 'app-features',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      features works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: 'features.component.html'
 })
 export class FeaturesComponent {
+  public clicks : number = 0;
 
+  AddClick(){
+    this.clicks++;
+  }
+
+  ResetCounter(){
+    this.clicks = 0;
+  }
 }

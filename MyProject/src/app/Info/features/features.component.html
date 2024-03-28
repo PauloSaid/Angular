@@ -1,0 +1,14 @@
+<div class="container d-flex p-2 bd-highlight">
+    <div class="card align-items-center " style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Testing interpolation</h5>
+          <p class="card-text">Card create for testing</p>
+          <button class="btn btn-warning" (click)="AddClick()" [disabled]="clicks >= 10">
+            {{ clicks >= 10 ? 'Maximum clickes reached' : 'Add Click' }}
+          </button>
+          <button class="btn btn-warning ml-2" (click)="ResetCounter()">Reset Counter</button>
+          <br>
+          <span class="display-3 d-flex justify-content-center"> {{clicks}}</span> 
+        </div>
+      </div>
+</div>
