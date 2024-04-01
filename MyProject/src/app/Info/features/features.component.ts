@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class FeaturesComponent {
   public clicks : number = 0;
+  public text : string = "";
 
   AddClick(){
     this.clicks++;
@@ -15,5 +16,9 @@ export class FeaturesComponent {
 
   ResetCounter(){
     this.clicks = 0;
+  }
+
+  KeyUp(event : any){
+    this.text = event.target.value;
   }
 }
